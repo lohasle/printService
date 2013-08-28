@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>系统常量配置</comment>
+
+	<!-- acrobat 应用程序地址 -->
+	<entry key="acrobat.exe">C:\\Program Files (x86)\\bioPDF\\Acrobat Wrapper</entry>
+	
+	<!-- acroRd32 应用程序地址 -->
+	<entry key="acroRd32.exe">C:\\Program Files (x86)\\Adobe\\Reader 11.0\\Reader</entry>
+	
+	<!-- wkhtmltopdf 应用程序地址 -->
+	<entry key="wkhtmltopdf.exe">C:\\Program Files (x86)\\wkhtmltopdf</entry>
+
+</properties>

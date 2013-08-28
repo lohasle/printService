@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>printService</display-name>
+
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>printService.root</param-value>
+	</context-param>
+	
+	<servlet>
+		<description>PrintServlet</description>
+		<display-name>PrintServlet</display-name>
+		<servlet-name>DoPrintServlet</servlet-name>
+		<servlet-class>me.huijin.printService.servlet.DoPrintServlet</servlet-class>
+		<init-param>
+			<param-name>log4j</param-name>
+			<param-value>/WEB-INF/classes/log4j.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DoPrintServlet</servlet-name>
+		<url-pattern>/doPrint</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<description>PrintListServlet</description>
+		<display-name>PrintListServlet</display-name>
+		<servlet-name>PrintListServlet</servlet-name>
+		<servlet-class>me.huijin.printService.servlet.PrintListServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PrintListServlet</servlet-name>
+		<url-pattern>/printList</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>
